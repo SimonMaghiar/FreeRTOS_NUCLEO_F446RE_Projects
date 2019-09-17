@@ -20,4 +20,4 @@ RTC_DATETIME_READ
 
 Notes:
 
-The UART interrupt priority must be set equal or lower than configMAX_SYSCALL_INTERRUPT_PRIORITY because we will be using FreeRTOS APIs inside of it.
+The UART interrupt priority must be set equal or lower than configMAX_SYSCALL_INTERRUPT_PRIORITY because we will be using FreeRTOS APIs inside of it. Since configMAX_SYSCALL_INTERRUPT_PRIORITY is set to 5, we can use interrupt priority equal to 5 up to 15 but we can't use priority lower than 5. 
