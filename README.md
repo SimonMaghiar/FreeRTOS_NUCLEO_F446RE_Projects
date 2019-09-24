@@ -1,4 +1,15 @@
-There are two types of scheduling algorithm: Cooperative Scheduling and Preemptive Scheduling
+$ Note to remember:
+Syncronization is nothing but aligning number of Tasks to achieve a desired behaviour. (Almost like pipe-lineing)
+
+Where as mutual exclusion is avoiding a task to execute the critical section which is already owned by another task for execution.
+
+Typically Semaphores are used to implement the synchronization between tasks and between tasks and interrupts. 
+
+Mutex are the best choice to implement the mutual exclusion. That is protectcing access of a shared item. 
+
+Sempahores also can be used to implement the mutual exclusion but it will introduce some serious design issues.
+
+There are two types of scheduling algorithm: Cooperative Scheduling and Preemptive Scheduling.
 
 # FreeRTOS_NUCLEO_F446RE_Projects
 
