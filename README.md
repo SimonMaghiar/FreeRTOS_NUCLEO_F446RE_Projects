@@ -1,4 +1,4 @@
-$ Note to remember:
+# Note to remember:
 Syncronization is nothing but aligning number of Tasks to achieve a desired behaviour. (Almost like pipe-lineing)
 
 Where as mutual exclusion is avoiding a task to execute the critical section which is already owned by another task for execution.
