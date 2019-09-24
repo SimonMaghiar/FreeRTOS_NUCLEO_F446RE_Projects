@@ -9,6 +9,15 @@ Mutex are the best choice to implement the mutual exclusion. That is protectcing
 
 Sempahores also can be used to implement the mutual exclusion but it will introduce some serious design issues.
 
+There are two types of semaphore: Binary and Counting Sempanhore.
+
+Binary semaphore: If its value=1 then semaphore or key is available. If value=0 semaphore is not available.
+Binary semaphore use cases: 1. Syncronization 2. Mutual Exclusion
+
+Counting semaphore: its value can be initialized to any number so if value = 20, then it is analogous to having 20 semaphore keys.
+Every time a task aquires a key, semaphore's value will be decremented by 1 until reaches 0.
+Each time an event/interrupt occurs, the event/interrupt handler will "give" the sempahore, thus incrementing the semaphore count value.
+
 There are two types of scheduling algorithm: Cooperative Scheduling and Preemptive Scheduling.
 
 # FreeRTOS_NUCLEO_F446RE_Projects
