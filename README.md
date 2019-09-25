@@ -7,7 +7,7 @@ Typically Semaphores are used to implement the synchronization between tasks and
 
 Mutex are the best choice to implement the mutual exclusion. That is protectcing access of a shared item. 
 
-Sempahores also can be used to implement the mutual exclusion but it will introduce some serious design issues.
+Sempahores also can be used to implement the  $bg-blue mutual exclusion but it will introduce some serious design issues.
 
 There are two types of semaphore: Binary and Counting Sempanhore.
 
