@@ -17,7 +17,7 @@ Sempahores also can be used to implement the mutual exclusion but it will introd
 Priority inversion is a scenario in scheduling in which a high priority task is indirectly preempted by a lower priority task effectively inverting the relative priorities of the two tasks. This violates the priority model that high priority tasks can only be prevented from running by higher priority tasks and briefly by low priority tasks which will quickly complete their use of a resource shared by the high and low priority tasks.
 
 Priorty inversion can happen if you use Binary semaphore for shared recourses ! That's the reason why Mutex is a better alternative to serialize the access to shared recourse. 
-The biggest advantage of Mutex over binary semaphore is @Priorty Inheritance!
+The biggest advantage of Mutex over binary semaphore is Priority Inheritance!
 
 There are two types of semaphore: Binary and Counting Sempanhore.
 
