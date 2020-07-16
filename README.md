@@ -37,6 +37,10 @@ STM32_HelloWorld uses cooperative scheduling which means that the System Handler
 # RTOS Task Notification
 
 Each RTOS task has a 32-bit notification value which is initialised to zero when the RTOS task is created. An RTOS task notification is an event sent directly to a task that can unblock the receiving task, and optionally update the receiving task's notification value in a number of different ways. For example, a notification may overwrite the receiving task's notification value, or just set one or more bits in the receiving task's notification value.
+APIs used:
+-xTaskNotifiyWait() --> If a task calls xTaskNotifyWait(), then it waits with an optional timeout until it receives a notification from some other task or interrupt handler
+-xTaskNotify() --> Used to send an event directly to and potentially unblock an RTOS task, and optionally update the receiving task's notification value in one of the following ways: 1) Write a 32-bit number to the notification value 2) Increment the notificatin value 3) Set one or more bits in the notification value 4) Leave the notification value unchanged
+-
 
 # STM32_FreeRTOS_Queue_Processing
 
