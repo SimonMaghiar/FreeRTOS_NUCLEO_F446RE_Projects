@@ -34,6 +34,10 @@ There are two types of scheduling algorithm: Cooperative Scheduling and Preempti
 
 STM32_HelloWorld uses cooperative scheduling which means that the System Handler doesn't trigger the PendSV Handler every 1ms. In cooperative scheduling the task manually should yield it's execution to another task. In this case we used taskYIELD Api to do it. We used SEGGER software to trace the signals and the operation behavior.
 
+# RTOS Task Notification
+
+Each RTOS task has a 32-bit notification value which is initialised to zero when the RTOS task is created. An RTOS task notification is an event sent directly to a task that can unblock the receiving task, and optionally update the receiving task's notification value in a number of different ways. For example, a notification may overwrite the receiving task's notification value, or just set one or more bits in the receiving task's notification value.
+
 # STM32_FreeRTOS_Queue_Processing
 
 In this project, we are using 4 tasks and 2 queues.  The first task in "menu_print_task" which takes care to print the "menu with commands" over UART to the console so that the user can take appropriate actions. But note that this task doesn't send the menu directly to the uart. It does it by sending the commands first to the QUEUE (uart_write_queue) and then the the second task which is "uart_write_task" will read the commands from the queue (uart_write_queue) in order to send that data to the UART peripheral.
